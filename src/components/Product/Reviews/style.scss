@@ -1,0 +1,26 @@
+@import '/src/styles/variables';
+
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+
+  &__number {
+    flex-shrink: 0;
+  }
+
+  .rating {
+    display: flex;
+    gap: 1rem;
+
+    &__star {
+      opacity: 0.5;
+    }
+    &__star.active {
+      opacity: 1;
+      color: #ffd700;
+    }
+  }
+}

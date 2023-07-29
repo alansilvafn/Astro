@@ -2,7 +2,7 @@ import './style.scss'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import { FaSearch, FaSignInAlt, FaShoppingBag } from 'react-icons/fa'
-import astroLogo from '../../assets/images/logo.svg'
+import logo from '/images/logo.svg'
 
 function Header() {
   return (
@@ -11,7 +11,7 @@ function Header() {
         <Container>
           <div className="navigation__brand">
             <a href="#">
-              <img src={astroLogo} className="img-fluid" width={200} height={43} alt="Astro" />
+              <img src={logo} className="img-fluid" width={200} height={43} alt="Astro" />
             </a>
             <Navbar.Toggle aria-controls="navigation-collapse" />
           </div>
