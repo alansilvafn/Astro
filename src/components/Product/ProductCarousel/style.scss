@@ -1,0 +1,68 @@
+@import '/src/styles/variables';
+
+.product-carousel {
+  padding: 3rem 0;
+
+  &__img:not(.lazyloaded) {
+    width: 50%;
+    opacity: 0.5;
+  }
+  &__img {
+    height: 400px;
+    width: auto;
+    max-width: 70%;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: transparent;
+
+    @media (max-width: 575.98px) {
+      height: 280px;
+    }
+  }
+}
+.carousel {
+  &-item {
+    text-align: center;
+  }
+
+  &-indicators {
+    flex-direction: column;
+    position: absolute;
+    left: initial;
+    right: 0;
+    top: 0;
+    bottom: initial;
+    margin: 0;
+    gap: 1rem;
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      transform: translateY(-50%);
+    }
+
+    @media (max-width: 575.98px) {
+      flex-direction: row;
+      left: 0;
+      right: 0;
+      top: initial;
+      bottom: -1.5rem;
+      transform: translateY(50%);
+    }
+
+    button[data-bs-target] {
+      width: 15px;
+      height: 5px;
+      border-radius: 5px;
+      border: 0;
+      margin: 0;
+
+      &.active {
+        background-color: $red;
+      }
+    }
+  }
+
+  &-control-prev,
+  &-control-next {
+    opacity: 1;
+  }
+}

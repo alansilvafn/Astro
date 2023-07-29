@@ -11,31 +11,6 @@
     }
   }
 
-  .breadcrumb {
-    display: flex;
-    margin-bottom: 2rem;
-
-    &__item {
-      display: flex;
-      align-items: center;
-
-      &:not(:last-child):after {
-        content: '';
-        height: 0.25rem;
-        width: 0.25rem;
-        display: block;
-        margin: 0 0.5rem;
-        border-radius: 50%;
-        background-color: $grey;
-      }
-    }
-
-    &__link {
-      font-weight: 400;
-      font-size: 0.875rem;
-    }
-  }
-
   &__info {
     padding: 3rem 0;
     height: 100%;
@@ -57,36 +32,12 @@
     color: rgba(white, 0.6);
   }
 
-  .reviews {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-
-    &__number {
-      flex-shrink: 0;
-    }
-  }
-  .rating {
-    display: flex;
-    gap: 1rem;
-
-    &__star {
-      opacity: 0.5;
-    }
-    &__star.active {
-      opacity: 1;
-      color: #ffd700;
-    }
-  }
-
   &__price {
     font-size: 2.5rem;
     font-weight: 700;
   }
 
-  &__add {
+  &__cta {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -95,66 +46,5 @@
     @media (max-width: 991.98px) {
       row-gap: 0.5rem;
     }
-
-    .button-add {
-      flex-shrink: 0;
-    }
-  }
-
-  &__slider {
-    padding: 3rem 0;
-
-    .carousel {
-      &-indicators {
-        flex-direction: column;
-        position: absolute;
-        left: initial;
-        right: 0;
-        top: 0;
-        bottom: initial;
-        margin: 0;
-        gap: 1rem;
-
-        @media (min-width: 768px) and (max-width: 991.98px) {
-          transform: translateY(-50%);
-        }
-
-        @media (max-width: 575.98px) {
-          flex-direction: row;
-          left: 0;
-          right: 0;
-          top: initial;
-          bottom: -1.5rem;
-          transform: translateY(50%);
-        }
-
-        button {
-          width: 15px;
-          height: 5px;
-          border-radius: 5px;
-          border: 0;
-          margin: 0;
-
-          &.active {
-            background-color: $red;
-          }
-        }
-      }
-
-      &-control-prev,
-      &-control-next {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__img {
-    max-height: 400px;
-    aspect-ratio: 1/1;
-    width: calc(100% - 30%); // 15% control-prev + 15% control-next
-    margin: 0 auto;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 }

@@ -1,0 +1,27 @@
+@import '/src/styles/variables';
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child):after {
+      content: '';
+      height: 0.25rem;
+      width: 0.25rem;
+      display: block;
+      margin: 0 0.5rem;
+      border-radius: 50%;
+      background-color: $grey;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+}

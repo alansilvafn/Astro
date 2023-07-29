@@ -22,6 +22,7 @@
 .button-slider {
   width: 2rem;
   height: 3rem;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +31,7 @@
   @include transitions;
 
   .button-icon {
+    max-width: 60%;
     font-size: 1.5rem;
     color: white;
     @include transitions;
@@ -60,7 +62,7 @@
   border-bottom-left-radius: 1rem;
 }
 
-.button-add {
+.button-add-to-cart {
   background-color: $bg_button;
   color: white;
   border-radius: 30px;
@@ -69,6 +71,7 @@
   align-items: center;
   gap: 0.5rem;
   border: 0;
+  white-space: nowrap;
   @include transitions;
 
   .icon {
@@ -76,12 +79,12 @@
   }
 
   &:hover {
-    background-color: rgba($bg_button, 0.8);
+    .icon {
+      transform: scale(1.25);
+    }
   }
 
   &:active {
-    .icon {
-      transform: scale(0.8);
-    }
+    transform: scale(0.9);
   }
 }
