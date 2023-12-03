@@ -19,26 +19,26 @@ export default function Login() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body className="p-0 login">
-          <Button className="btn-close-x" variant="outline-light" onClick={handleClose}>
+          <Button className="btn-close-x" variant="link" onClick={handleClose}>
             <FaTimes />
           </Button>
           <div className="card py-3 px-2">
             <p className="text-center mb-3 mt-2">Log in to your account</p>
             <div className="row mx-auto mb-5">
               <div className="col-4">
-                <i className="fab fa-twitter">
+                <span className="fab">
                   <FaMicrosoft />
-                </i>
+                </span>
               </div>
               <div className="col-4">
-                <i className="fab fa-facebook">
+                <span className="fab fa-facebook">
                   <FaFacebookF />
-                </i>
+                </span>
               </div>
               <div className="col-4">
-                <i className="fab fa-google">
+                <span className="fab fa-google">
                   <FaGoogle />
-                </i>
+                </span>
               </div>
             </div>
             <form className="myform">
@@ -54,10 +54,11 @@ export default function Login() {
               <div className="form-group mt-3 mb-2">
                 <Button variant="outline-light" className="mb-4" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '12px' }}>
                   <span>Login</span>
-                  <FaSignInAlt></FaSignInAlt>
                 </Button>
-                <div className="col-md-6 col-12" style={{ fontSize: '12px' }}>
-                  Forgot your password?
+                <div style={{ fontSize: '12px', textAlign: 'center' }}>
+                  <a href="#" style={{ color: 'rgba(255, 255, 255, 0.6' }}>
+                    Forgot your password?
+                  </a>
                 </div>
               </div>
             </form>

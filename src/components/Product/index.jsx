@@ -53,7 +53,9 @@ function Product() {
               <span>Cart</span>
             </strong>
           </Toast.Header>
-          <Toast.Body>Astro A30 added to cart</Toast.Body>
+          <Toast.Body>
+            <strong>Astro A30</strong> added to cart
+          </Toast.Body>
         </Toast>
       </ToastContainer>
     </>
