@@ -1,8 +1,10 @@
 import './style.scss'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
-import { FaSearch, FaSignInAlt, FaShoppingBag } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa'
 import logo from '/images/logo.svg'
+import Cart from './Cart'
+import Login from './Login'
 
 function Header() {
   return (
@@ -11,7 +13,7 @@ function Header() {
         <Container>
           <div className="navigation__brand">
             <a href="#">
-              <img src={logo} className="img-fluid" width={200} height={43} alt="Astro" />
+              <img src={logo} className="img-fluid" width={180} alt="Astro" />
             </a>
             <Navbar.Toggle aria-controls="navigation-collapse" />
           </div>
@@ -52,16 +54,10 @@ function Header() {
                   </a>
                 </li>
                 <li className="navigation__item">
-                  <a href="#" className="button-login">
-                    <span>Login</span>
-                    <FaSignInAlt className="button-icon"></FaSignInAlt>
-                  </a>
+                  <Login />
                 </li>
                 <li className="navigation__item">
-                  <a href="#" className="button-bag">
-                    <FaShoppingBag className="button-icon"></FaShoppingBag>
-                    <span> (1)</span>
-                  </a>
+                  <Cart />
                 </li>
               </ul>
             </div>

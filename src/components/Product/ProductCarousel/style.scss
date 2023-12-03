@@ -3,10 +3,6 @@
 .product-carousel {
   padding: 3rem 0;
 
-  &__img:not(.lazyloaded) {
-    width: 50%;
-    opacity: 0.5;
-  }
   &__img {
     height: 400px;
     width: auto;
